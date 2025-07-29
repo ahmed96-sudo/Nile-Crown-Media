@@ -49,14 +49,14 @@ const ServicesSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <Card key={index} className="border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover overflow-hidden group">
-                            <CardHeader className="pb-4">
+                            <CardHeader className="pb-4 items-center text-center  md:items-start md:text-left">
                                 <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                     {service.icon}
                                 </div>
                                 <CardTitle className="text-xl font-display">{service.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <CardDescription className="text-gray-600">
+                                <CardDescription className="text-gray-600 text-center md:text-left">
                                     {service.description}
                                 </CardDescription>
                             </CardContent>

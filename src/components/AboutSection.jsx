@@ -2,7 +2,7 @@ import { Check } from 'lucide-react';
 
 const AboutSection = () => {
     return (
-        <section id="about" className="py-20 bg-white">
+        <section id="about" className="pt-20 bg-white md:py-20">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     {/* Image column */}
@@ -56,12 +56,12 @@ const AboutSection = () => {
                             ))}
                         </div>
 
-                        <div className="flex flex-wrap gap-6">
-                            <div className="flex flex-col">
+                        <div className="flex flex-wrap gap-6 md:justify-normal justify-center md:text-left text-center">
+                            <div className="flex flex-col md:w-auto w-[100px]">
                                 <span className="text-3xl font-bold text-nile-blue">95%</span>
                                 <span className="text-sm text-gray-600">Client Satisfaction</span>
                             </div>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col md:w-auto w-[100px]">
                                 <span className="text-3xl font-bold text-nile-blue">7+</span>
                                 <span className="text-sm text-gray-600">Years Experience</span>
                             </div>
@@ -69,7 +69,7 @@ const AboutSection = () => {
                                 <span className="text-3xl font-bold text-nile-blue">40+</span>
                                 <span className="text-sm text-gray-600">Team Members</span>
                             </div> */}
-                            <div className="flex flex-col">
+                            <div className="flex flex-col md:w-auto w-[100px]">
                                 <span className="text-3xl font-bold text-nile-blue">200+</span>
                                 <span className="text-sm text-gray-600">Projects Completed</span>
                             </div>

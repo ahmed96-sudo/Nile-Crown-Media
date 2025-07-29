@@ -4,35 +4,38 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
-        <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-nile-blue via-[#1a365d] to-[#1e3a8a] overflow-hidden pt-20">
+        <section id="hero" className="relative md:min-h-screen flex items-center bg-gradient-to-br from-nile-blue via-[#1a365d] to-[#1e3a8a] overflow-hidden md:pt-20 pt-24">
             {/* Background blobs */}
             <div className="absolute top-20 right-10 w-72 h-72 bg-nile-purple/20 rounded-full filter blur-3xl animate-blob"></div>
             <div className="absolute bottom-10 left-10 w-80 h-80 bg-nile-cyan/20 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
 
             <div className="container mx-auto px-4 z-10">
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-up">
+                    <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-up md:text-left text-center">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
                             Let's Build Something <span className="text-nile-cyan">Extraordinary</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg block md:hidden">
+                            At Nile Crown Media, we don't just create, we innovate. From brainstorming creative branding to creating eye-catching digital experiences, we craft solutions that inspire, drive actual results, and dare you to be different.
+                        </p>
+                        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg hidden md:block">
                             At Nile Crown Media, we don't just create, we innovate. From brainstorming creative branding to creating eye-catching digital experiences, we craft solutions that inspire, drive actual results, and dare you to be different. Whether you're introducing something new or on a path of brand improvement, we'll make your digital presence unforgettable.
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                            <Link to={`/contact`} reloadDocument>
-                                <Button size="lg" className="bg-nile-cyan hover:bg-nile-cyan/90 text-nile-blue font-medium">
+                        <div className="flex flex-wrap gap-4 justify-center md:justify-start w-full md:w-auto">
+                            <Link to={`/contact`} reloadDocument className="w-[70%] md:w-auto">
+                                <Button size="lg" className="bg-nile-cyan hover:bg-nile-cyan/90 text-nile-blue font-medium gap-0 w-full md:w-auto">
                                     Let's Create Magic <ArrowRight size={18} className="ml-2" />
                                 </Button>
                             </Link>
-                            <Link to={`/portfolio`} reloadDocument>
-                                <Button size="lg" className="border-white text-white">
+                            <Link to={`/portfolio`} reloadDocument className="w-[70%] md:w-auto">
+                                <Button size="lg" className="border-white text-white w-full md:w-auto">
                                     Explore Our Work
                                 </Button>
                             </Link>
                         </div>
                     </div>
 
-                    <div className="w-full md:w-1/2 relative animate-fade-in">
+                    <div className="w-full md:w-1/2 relative animate-fade-in hidden md:block">
                         <div className="relative">
                             {/* The main image container with 3D-like appearance */}
                             <div className="mx-auto relative z-20 rounded-lg shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
@@ -64,7 +67,7 @@ const HeroSection = () => {
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden flex-col items-center md:flex">
                 <span className="text-white text-sm mb-2">Scroll to explore</span>
                 <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
                     <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>

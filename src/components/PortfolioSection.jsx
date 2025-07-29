@@ -21,12 +21,12 @@ const projects = [
 
 const PortfolioSection = () => {
     return (
-        <section id="portfolio" className="py-20 bg-gray-50">
+        <section id="portfolio" className="pt-20 bg-gray-50 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16">
-                    <div>
+                    <div className='flex md:block flex-col items-center text-center md:text-left'>
                         <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Our Portfolio</h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
+                        <div className="w-48 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6 md:w-24"></div>
                         <p className="text-lg text-gray-600 max-w-xl">
                             Every project we touch turns into a digital masterpiece. Here's how we bring brands to life and drive real-world results.
                         </p>
@@ -54,13 +54,13 @@ const PortfolioSection = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-nile-blue/90 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
 
-                                <div className="absolute bottom-0 left-0 p-6 text-white z-10">
-                                    <span className="text-xs uppercase tracking-wider text-nile-cyan mb-2 block">
+                                <div className="absolute bottom-0 left-0 p-6 text-white z-10 text-center md:text-left">
+                                    <span className="text-xs uppercase tracking-wider text-[beige] mb-2 block">
                                         {project.category}
                                     </span>
                                     <h3 className="text-xl font-bold font-display mb-2">{project.title}</h3>
 
-                                    <p className="text-sm text-white/80 max-w-xs mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p className="text-sm text-white/80 md:max-w-xs max-w-fit mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         {project.description}
                                     </p>
 
@@ -77,11 +77,11 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="mt-16 flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-nile-blue to-nile-purple p-8 md:p-12 rounded-2xl text-white">
-                    <div className="md:w-2/3 mb-8 md:mb-0">
+                    <div className="md:w-2/3 mb-8 md:mb-0 text-center md:text-left">
                         <h3 className="text-2xl md:text-3xl font-bold font-display mb-4">
                             Ready to transform your digital presence?
                         </h3>
-                        <p className="text-white/80">
+                        <p className="text-white/80 md:text-[16px] text-[15px]">
                             Let's craft something extraordinary together.
                         </p>
                     </div>

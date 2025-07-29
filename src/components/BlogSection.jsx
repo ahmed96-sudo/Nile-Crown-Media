@@ -82,12 +82,12 @@ const BlogSection = () => {
 
     const regularPosts = blogPosts.filter(post => !post.featured).slice(0,3,1);
     return (
-        <section id="blog" className="py-20 bg-gray-50">
+        <section id="blog" className="pt-16 bg-gray-50 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16">
-                    <div>
+                    <div className='md:block flex flex-col items-center text-center md:text-left'>
                         <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Latest Insights</h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
+                        <div className="w-44 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
                         <p className="text-lg text-gray-600 max-w-xl">
                             Stay sharp, inspired, and ahead. Dive into insights, industry trends, and actionable strategies to take your brand to the next level.
                         </p>
@@ -117,7 +117,7 @@ const BlogSection = () => {
                                 </div>
                             </div>
 
-                            <CardContent className="p-6">
+                            <CardContent className="p-6 md:text-left text-center md:block flex flex-col items-center">
                                 <Link to={`/blog/${post.slug}`} reloadDocument>
                                     <h3 className="text-xl font-bold font-display mb-3 group-hover:text-nile-purple transition-colors cursor-pointer">
                                         {post.title}
@@ -150,8 +150,8 @@ const BlogSection = () => {
                 {/* Newsletter */}
                 <div className="mt-16 bg-white rounded-lg shadow-md p-8 md:p-12">
                     <div className="flex flex-col md:flex-row items-center">
-                        <div className="md:w-2/3 mb-8 md:mb-0">
-                            <h3 className="text-2xl md:text-3xl font-bold font-display mb-4">
+                        <div className="md:w-2/3 mb-8 md:mb-0 md:text-left text-center">
+                            <h3 className="text-[20px] md:text-3xl font-bold font-display mb-4">
                                 Subscribe to Our Newsletter
                             </h3>
                             <p className="text-gray-600">

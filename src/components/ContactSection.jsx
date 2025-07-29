@@ -167,7 +167,7 @@ const ContactSection = () => {
                     <div className="lg:w-2/3">
                         <Card>
                             <CardContent className="p-8">
-                                <h3 className="text-2xl font-bold font-display mb-6">Send Us a Message</h3>
+                                <h3 className="text-2xl font-bold font-display mb-6 text-center md:text-left">Send Us a Message</h3>
 
                                 <form /* action={`https://formsubmit.co/8786b8119003c753a48551f3a9981007`} method='POST' */ onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
