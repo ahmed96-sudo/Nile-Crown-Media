@@ -18,6 +18,7 @@ import { blogPosts } from '../data/blogPosts';
 const BlogPostDetail = () => {
     const { slug } = useParams();
     const post = blogPosts.find(p => p.slug === slug);
+    document.title = `Nile Crown Media | ${post.title}`;
 
     if (!post) {
         return (

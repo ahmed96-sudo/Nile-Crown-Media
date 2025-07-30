@@ -38,6 +38,7 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+    document.title = 'Nile Crown Media | Contact Us';
     const { toast } = useToast();
         const [formData, setFormData] = useState({
             fname: '',
@@ -139,13 +140,13 @@ const Contact = () => {
             </section>
 
             {/* Contact Section */}
-            <section className="py-20 bg-background">
+            <section className="pt-20 bg-background">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
                         <Card className="card-hover">
                             <CardHeader>
-                                <CardTitle className="text-2xl font-display">Send us a message</CardTitle>
+                                <CardTitle className="text-2xl font-display text-center md:text-left">Send us a message</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <form /* action={`https://formsubmit.co/8786b8119003c753a48551f3a9981007`} method='POST' */ onSubmit={handleSubmit} className="space-y-6">
@@ -243,9 +244,9 @@ const Contact = () => {
 
                         {/* Contact Information */}
                         <div className="space-y-8">
-                            <div>
+                            <div className='text-center md:text-left'>
                                 <h2 className="text-3xl font-bold font-display mb-4">Let's Connect</h2>
-                                <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
+                                <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6 block mx-auto md:mx-0"></div>
                                 <p className="text-muted-foreground mb-8">
                                     We're here to help bring your vision to life. Reach out to us through any of the channels below, and we'll get back to you within 24 hours.
                                 </p>

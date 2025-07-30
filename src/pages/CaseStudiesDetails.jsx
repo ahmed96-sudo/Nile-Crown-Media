@@ -27,6 +27,7 @@ const getIconComponent = (iconName) => {
 const CaseStudyDetail = () => {
     const { slug } = useParams();
     const caseStudy = caseStudies.find(study => study.slug === slug);
+    document.title = `Nile Crown Media | ${caseStudy.title}`;
 
     if (!caseStudy) {
         return (
@@ -79,7 +80,7 @@ const CaseStudyDetail = () => {
                     </Link>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div className='text-center md:text-left flex md:block flex-col items-center'>
                             <Badge className="bg-nile-purple mb-4">{caseStudy.industry}</Badge>
                             <h1 className="text-4xl md:text-5xl font-bold font-display mb-6">
                                 {caseStudy.title}
@@ -149,7 +150,7 @@ const CaseStudyDetail = () => {
             {/* Challenge & Solution */}
             <section className="py-16 bg-background">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-center md:text-left">
                         <Card className="p-8">
                             <h3 className="text-2xl font-bold font-display text-nile-purple mb-4">
                                 The Challenge
@@ -189,7 +190,7 @@ const CaseStudyDetail = () => {
                                 <Card className="flex-1 p-6">
                                     <div className="flex items-center justify-between mb-3">
                                         <h3 className="text-xl font-bold">{phase.phase}</h3>
-                                        <Badge variant="outline" className="flex items-center gap-1">
+                                        <Badge variant="outline" className="flex items-center gap-1 text-center md:text-left">
                                             <Clock className="h-3 w-3" />
                                             {phase.duration}
                                         </Badge>
@@ -267,7 +268,7 @@ const CaseStudyDetail = () => {
             {caseStudy.nextSteps && (
                 <section className="py-16 bg-muted/50">
                     <div className="container mx-auto px-4">
-                        <Card className="max-w-4xl mx-auto p-8">
+                        <Card className="max-w-4xl mx-auto p-8 text-center md:text-left">
                             <h2 className="text-2xl font-bold font-display mb-4">Next Steps</h2>
                             <p className="text-muted-foreground">{caseStudy.nextSteps}</p>
                         </Card>
@@ -292,7 +293,7 @@ const CaseStudyDetail = () => {
                                         <Badge className="bg-nile-purple">{study.industry}</Badge>
                                     </div>
                                 </div>
-                                <CardContent className="p-6">
+                                <CardContent className="p-6 text-center md:text-left">
                                     <h3 className="text-xl font-bold font-display mb-2">{study.title}</h3>
                                     <p className="text-muted-foreground text-sm mb-4">{study.client}</p>
                                     <Link to={`/portfolio/${study.slug}`} reloadDocument>

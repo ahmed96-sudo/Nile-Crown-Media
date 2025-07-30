@@ -60,6 +60,7 @@ const values = [
 ]; */
 
 const About = () => {
+    document.title = 'Nile Crown Media | About Us';
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -98,12 +99,12 @@ const About = () => {
             </section>
 
             {/* Story Section */}
-            <section className="py-20 bg-background">
+            <section className="pt-16 md:pt-16 bg-background text-center md:text-left">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">Our Story</h2>
-                            <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
+                            <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6 mx-auto md:mx-0"></div>
                             <p className="text-muted-foreground mb-6">
                                 Founded with a vision to democratize AI-powered web design, Nile Crown Media emerged from the belief that every business deserves a digital presence that truly represents their brand and drives results.
                             </p>
@@ -119,7 +120,7 @@ const About = () => {
                                 </Button>
                             </Link>
                         </div>
-                        <div className="relative">
+                        <div className="relative hidden md:block">
                             <img
                                 src="/photo-1522071820081-009f0129c71c.jpg"
                                 alt="Our Team"

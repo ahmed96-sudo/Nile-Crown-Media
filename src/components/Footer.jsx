@@ -1,8 +1,12 @@
-import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowUpRight, ArrowUp, ArrowDown } from 'lucide-react';
 import { Separator } from './ui/Separator';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(true);
     return (
         <footer className="bg-nile-blue text-white pt-16 pb-8">
             <div className="container mx-auto px-4">
@@ -31,7 +35,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div className='hidden md:block'>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-3">
                             {['Services', 'Portfolio', 'About Us', 'Blog', 'Contact'].map((link) => (
@@ -48,8 +52,26 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    {/* Quick Links Phone */}
+                    <div className='block md:hidden'>
+                        <h3 onClick={()=>setIsOpen1(!isOpen1)} className="text-lg font-semibold mb-4 hover:text-nile-cyan flex flex-row justify-between cursor-pointer">Quick Links {isOpen1 ? <ArrowUp size={20} /> : <ArrowDown size={20} />}</h3>
+                        {isOpen1 && <ul className="space-y-3">
+                            {['Services', 'Portfolio', 'About Us', 'Blog', 'Contact'].map((link) => (
+                                <li key={link}>
+                                    <a
+                                        href={`${link.toLowerCase().replace(' us', '')}`}
+                                        className="text-gray-300 hover:text-nile-cyan transition-colors flex items-center"
+                                    >
+                                        <span>{link}</span>
+                                        <ArrowUpRight size={14} className="ml-1" />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>}
+                    </div>
+
                     {/* Services */}
-                    <div>
+                    <div className='hidden md:block'>
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="space-y-3">
                             {[
@@ -91,8 +113,51 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    {/* Services Phone */}
+                    <div className='block md:hidden'>
+                        <h3 onClick={()=>setIsOpen2(!isOpen2)} className="text-lg font-semibold mb-4 hover:text-nile-cyan flex flex-row justify-between cursor-pointer">Services {isOpen2 ? <ArrowUp size={20} /> : <ArrowDown size={20} />}</h3>
+                        {isOpen2 && <ul className="space-y-3">
+                            {[
+                                {
+                                    name: 'UI/UX Design',
+                                    url: '/services/ui-ux-design',
+                                },
+                                {
+                                    name: 'AI-Powered Development',
+                                    url: '/services/ai-powered-development',
+                                },
+                                {
+                                    name: 'Digital Strategy',
+                                    url: '/services/digital-strategy',
+                                },
+                                {
+                                    name: 'Content Creation',
+                                    url: '/services/content-creation',
+                                },
+                                {
+                                    name: 'Brand Identity',
+                                    url: '/services/brand-identity',
+                                },
+                                {
+                                    name: 'Growth Marketing',
+                                    url: '/services/growth-marketing',
+                                }
+                            ].map((service,index) => (
+                                <li key={index}>
+                                    <a
+                                        href={`${service.url}`}
+                                        className="text-gray-300 hover:text-nile-cyan transition-colors flex items-center"
+                                    >
+                                        <span>{service.name}</span>
+                                        <ArrowUpRight size={14} className="ml-1" />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>}
+                    </div>
+
                     {/* Contact */}
-                    <div>
+                    <div className='hidden md:block'>
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <address className="not-italic text-gray-300 space-y-3">
                             <a href="https://maps.app.goo.gl/zg2XCeGc8wV2VsR7A">
@@ -111,6 +176,28 @@ const Footer = () => {
                                 </a>
                             </p>
                         </address>
+                    </div>
+
+                    {/* Contact Phone */}
+                    <div className='block md:hidden'>
+                        <h3 onClick={()=>setIsOpen3(!isOpen3)} className="text-lg font-semibold mb-4 hover:text-nile-cyan flex flex-row justify-between cursor-pointer">Contact Us {isOpen3 ? <ArrowUp size={20} /> : <ArrowDown size={20} />}</h3>
+                        {isOpen3 && <address className="not-italic text-gray-300 space-y-3">
+                            <a href="https://maps.app.goo.gl/zg2XCeGc8wV2VsR7A">
+                                <p>124 City Road</p>
+                                <p>London</p>
+                                <p>United Kingdom EC1V 2NX</p>
+                            </a>
+                            <p className="pt-2">
+                                <a href="mailto:hello@nilecrownmedia.com" className="hover:text-nile-cyan transition-colors">
+                                    hello@nilecrownmedia.com
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+440123456789" className="hover:text-nile-cyan transition-colors">
+                                    +440123456789
+                                </a>
+                            </p>
+                        </address>}
                     </div>
                 </div>
 

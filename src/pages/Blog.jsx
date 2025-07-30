@@ -10,6 +10,8 @@ import { blogPosts } from '../data/blogPosts';
 const categories = ['All', 'AI & Technology', 'Design', 'Development', 'Marketing', 'SEO'];
 
 const Blog = () => {
+    document.title = 'Nile Crown Media | Blog';
+
     const [activeCategory, setActiveCategory] = useState('All');
 
     const filteredPosts = activeCategory === 'All'
@@ -82,8 +84,8 @@ const Blog = () => {
                                             {featuredPost.readTime}
                                         </div>
                                     </div>
-                                    <Link to={`/blog/${featuredPost.slug}`} reloadDocument>
-                                        <Button className="w-fit bg-nile-purple hover:bg-nile-purple/90">
+                                    <Link to={`/blog/${featuredPost.slug}`} reloadDocument className='m-auto md:m-0'>
+                                        <Button className="w-[200px] bg-nile-purple hover:bg-nile-purple/90">
                                             Read Article <ArrowRight className="h-4 w-4 ml-2" />
                                         </Button>
                                     </Link>
@@ -128,7 +130,7 @@ const Blog = () => {
                                     </div>
                                 </div>
 
-                                <CardContent className="p-6">
+                                <CardContent className="p-6 text-center md:text-left flex flex-col items-center md:block">
                                     <Link to={`/blog/${post.slug}`} reloadDocument>
                                         <h3 className="text-xl font-bold font-display mb-3 group-hover:text-nile-purple transition-colors cursor-pointer">
                                             {post.title}

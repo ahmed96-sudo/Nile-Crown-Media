@@ -17,6 +17,7 @@ const getIconComponent = (iconName) => {
 };
 
 const Portfolio = () => {
+    document.title = 'Nile Crown Media | Portfolio';
     const featuredStudy = caseStudies.find(study => study.featured);
     const regularStudies = caseStudies.filter(study => !study.featured);
 
@@ -65,7 +66,7 @@ const Portfolio = () => {
                                     </div>
                                 </div>
 
-                                <CardContent className="p-8 lg:p-12">
+                                <CardContent className="p-8 lg:p-12 text-center md:text-left">
                                     <h2 className="text-3xl font-bold font-display mb-2">{featuredStudy.title}</h2>
                                     <p className="text-muted-foreground mb-6">{featuredStudy.client}</p>
 
@@ -95,14 +96,14 @@ const Portfolio = () => {
                                             </div>
                                         </div>
 
-                                        <div className="flex flex-wrap gap-2">
+                                        <div className="flex flex-wrap gap-2 justify-center md:justify-normal">
                                             {featuredStudy.tags.map((tag, index) => (
                                                 <Badge key={index} variant="secondary">{tag}</Badge>
                                             ))}
                                         </div>
 
-                                        <Link to={`/portfolio/${featuredStudy.slug}`} reloadDocument>
-                                            <Button className="bg-nile-purple hover:bg-nile-purple/90 mt-[20px]">
+                                        <Link to={`/portfolio/${featuredStudy.slug}`} reloadDocument className='w-full md:w-auto flex md:block justify-center'>
+                                            <Button className="bg-nile-purple hover:bg-nile-purple/90">
                                                 View Full Case Study <ExternalLink className="h-4 w-4 ml-2" />
                                             </Button>
                                         </Link>
@@ -137,7 +138,7 @@ const Portfolio = () => {
                                     </div>
                                 </div>
 
-                                <CardContent className="p-6">
+                                <CardContent className="p-6 text-center md:text-left">
                                     <h3 className="text-xl font-bold font-display mb-2">{study.title}</h3>
                                     <p className="text-muted-foreground text-sm mb-4">{study.client}</p>
 
@@ -145,7 +146,7 @@ const Portfolio = () => {
                                         {study.challenge}
                                     </p>
 
-                                    <div className="grid grid-cols-3 gap-2 mb-4">
+                                    <div className="grid md:grid-cols-3 gap-2 mb-4">
                                         {study.results.slice(0, 3).map((result, index) => (
                                             <div key={index} className="text-center">
                                                 <div className="text-lg font-bold text-nile-purple">{result.value}</div>
@@ -154,7 +155,7 @@ const Portfolio = () => {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-wrap gap-1 mb-4">
+                                    <div className="flex flex-wrap gap-1 mb-4 justify-center md:justify-normal">
                                         {study.tags.slice(0, 2).map((tag, index) => (
                                             <Badge key={index} variant="secondary" className="text-xs">{tag}</Badge>
                                         ))}

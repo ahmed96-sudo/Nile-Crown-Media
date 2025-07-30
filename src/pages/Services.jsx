@@ -46,6 +46,7 @@ const services = [
 ];
 
 const Services = () => {
+    document.title = 'Nile Crown Media | Services';
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -73,7 +74,7 @@ const Services = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <Card key={index} className="border border-gray-100 hover:shadow-xl transition-all duration-300 card-hover overflow-hidden group">
-                                <CardHeader className="pb-4">
+                                <CardHeader className="pb-4 items-center md:items-start text-center md:text-left">
                                     <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                         {service.icon}
                                     </div>

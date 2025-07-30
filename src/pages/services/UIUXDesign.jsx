@@ -94,7 +94,7 @@ const UIUXDesign = () => {
 
                 <div className="container mx-auto px-4 py-20 z-10 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div className='text-center md:text-left flex md:block flex-col items-center'>
                             <Badge className="bg-nile-cyan text-nile-blue mb-4 cursor-default">UI/UX Design</Badge>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
                                 Design That <span className="text-nile-cyan">Converts</span>
@@ -102,7 +102,7 @@ const UIUXDesign = () => {
                             <p className="text-lg md:text-xl text-gray-300 mb-8">
                                 Create intuitive, beautiful user experiences that drive engagement and deliver results. Our AI-powered design process ensures your users love every interaction.
                             </p>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                 <Link to={`/contact`} reloadDocument>
                                     <Button size="lg" className="bg-nile-cyan hover:bg-nile-cyan/90 text-nile-blue">
                                         Start Your Project <ArrowRight className="h-5 w-5 ml-2" />
@@ -129,7 +129,7 @@ const UIUXDesign = () => {
             </section>
 
             {/* Services Overview */}
-            <section className="py-20 bg-background">
+            <section className="pt-20 bg-background">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Our UI/UX Services</h2>
@@ -163,7 +163,7 @@ const UIUXDesign = () => {
             </section>
 
             {/* Process Section */}
-            <section className="py-20 bg-muted/50">
+            <section className="pt-20 bg-muted/50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Our Design Process</h2>
@@ -177,7 +177,7 @@ const UIUXDesign = () => {
                         {processSteps.map((step, index) => (
                             <Card key={index} className="overflow-hidden card-hover">
                                 <CardContent className="p-8">
-                                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center text-center md:text-left">
                                         <div className="lg:col-span-2 text-center lg:text-left">
                                             <div className="text-4xl font-bold text-nile-purple/20 mb-2">{step.number}</div>
                                             <div className="flex justify-center lg:justify-start">
@@ -201,8 +201,8 @@ const UIUXDesign = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">Why Great UI/UX Matters</h2>
-                            <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6"></div>
+                            <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-center md:text-left">Why Great UI/UX Matters</h2>
+                            <div className="w-24 h-1 bg-gradient-to-r from-nile-purple to-nile-cyan mb-6 block mx-auto md:mx-0"></div>
                             <p className="text-muted-foreground mb-8">
                                 Exceptional user experience design isn't just about making things look pretty. It's about creating meaningful interactions that drive business results and user satisfaction.
                             </p>
